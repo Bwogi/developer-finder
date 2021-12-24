@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/layout/Navbar';
 import Users from './components/Users/Users';
 import axios from 'axios';
+import Search from './components/Users/Search';
 class App extends Component {
 	state = {
 		users: [],
@@ -21,6 +22,7 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<Navbar />
+				<Search />
 				<div className='container'>
 					<Users loading={this.state.loading} users={this.state.users} />
 				</div>
